@@ -8,7 +8,7 @@ Repository to host the project website for the paper:
 > <a href='placeholder_project_page_url'><img src='https://img.shields.io/badge/Project-Website-blue'></a>
 > <a href='placeholder'><img src='https://img.shields.io/badge/arXiv-Paper-red'></a> 
 > <a href='https://doi.org/10.1145/3799825.3818695'><img src='https://img.shields.io/badge/ACM-Paper-violet'></a> 
-> <a href='placeholder_project_page_url#video-container'><img src='https://img.shields.io/badge/Supplementary-Video-Green'></a> 
+> <a href='Assets/video_demo.mp4'><img src='https://img.shields.io/badge/Supplementary-Video-Green'></a> 
 > 
 > Speech-driven 3D facial animation research has shown promising results, but most methods rely on representations that are not compatible with production pipelines. In this work, we present a deployable system that bridges this gap by enabling speech-driven 3D facial animation directly in Unreal Engine (UE) using ARKit-compatible representations. We construct the 3DMEAD-ARKit dataset by converting the MEAD corpus into blendshape sequences using MediaPipe, and retrain FaceDiffuser and ProbTalk3D-X to generate stochastic and emotion-controllable animations. We further develop a modular UE plugin with a Python backend that supports model selection and parameter control. We compare our results to two existing commercial tools: Epic Games’ MetaHuman speech-driven animator and NVIDIA Audio2Face with a perceptual user study. The results highlight the importance of comparisons among academic and commercial pipelines.
 
