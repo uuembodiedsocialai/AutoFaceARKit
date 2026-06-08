@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Speech-Driven Production-Ready Digital Humans">
+  <meta name="keywords" content="Speech-Driven Facial Animation, Deep Learning, Digital Humans, Tool Development, UE Plugin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans</h1>
+          <h3 class="title is-3 publication-title">Accepted to the <a href="https://s2026.siggraph.org/program/posters/">ACM SIGGRAPH 2026 Posters Program</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://www.linkedin.com/in/alessandrobusacchi/">Alessandro Busacchi, </span>
+            <span class="author-block"><a href="https://www.uu.nl/staff/KIHaque">Kazi Injamamul Haque</a>, </span>
+            <span class="author-block"><a href="https://www.uu.nl/staff/ZYumak">Zerrin Yumak</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Utrecht University, </span>
+            <span class="author-block">The Netherlands</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://doi.org/10.1145/3799825.3818695" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-google-scholar"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="placeholder" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#video-container" class="button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Speech-driven 3D facial animation research has shown promising results, but most methods rely on representations that are not compatible with production pipelines. In this work, we present a deployable system that bridges this gap by enabling speech-driven 3D facial animation directly in Unreal Engine (UE) using ARKit-compatible representations. We construct the 3DMEAD-ARKit dataset by converting the MEAD corpus into blendshape sequences using MediaPipe, and retrain FaceDiffuser and ProbTalk3D-X to generate stochastic and emotion-controllable animations. We further develop a modular UE plugin with a Python backend that supports model selection and parameter control. We compare our results to two existing commercial tools: Epic Games’ MetaHuman speech-driven animator and NVIDIA Audio2Face with a perceptual user study. The results highlight the importance of comparisons among academic and commercial pipelines. We recommend watching the supplementary video. We also plan to do live demonstrations at the conference.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div id="video-container" class="publication-video">
+          <iframe width="1840" height="1035" src="https://www.youtube.com/embed/placeholder" title="Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans (SIGGRAPH 2026)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="has-text-centered mt-3">The supplementary video contains a demonstration of the use of AutoFaceARKit plugin for Unreal Engine 5 for the generation of facial animation using speech-driven facial animation research models.</p>
+      </div>
+    </div> 
+    <br>
+
+    <div class="columns is-centered has-text-centered mt-6">
+      <div class="column is-full">
+        <h2 class="title is-3">Dataset Processing Pipeline</h2>
+        <div class="content has-text-justified mb-5">
+          We built the standardized, FACS-based <strong>3DMEAD-ARKit</strong> dataset by extracting frame-wise blendshape sequences from the MEAD video corpus using MediaPipe. This dataset natively enables both emotion and intensity control during speech-driven generation.
+        </div>
+        
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-third">
+            <img src="Assets/dataset_og.png" alt="Original MEAD Video Frame">
+            <p class="is-size-7 mt-1"><strong>Step 1:</strong> Original MEAD video frame</p>
+          </div>
+          <div class="column is-third">
+            <img src="Assets/dataset_mp.png" alt="MediaPipe Facial Landmark Tracking">
+            <p class="is-size-7 mt-1"><strong>Step 2:</strong> MediaPipe facial landmark tracking</p>
+          </div>
+          <div class="column is-third">
+            <img src="Assets/dataset_arkit.png" alt="ARKit Ground-Truth Mapping">
+            <p class="is-size-7 mt-1"><strong>Step 3:</strong> Resulting ARKit ground-truth animation</p>
+          </div>
+        </div>
+        <p class="is-size-6 mt-3 has-text-centered text-muted"><strong>Figure: Dataset processing pipeline.</strong> From left to right: Original MEAD video frame, MediaPipe facial landmark tracking, and the resulting ground-truth animation rendered onto an ARKit-compatible digital human.</p>
+      </div>
+    </div>
+    <br>
+
+    <div class="columns is-centered has-text-centered mt-6">
+      <div class="column is-full">
+        <h2 class="title is-3">System Architecture Overview</h2>
+        <div class="content has-text-justified">
+          Our modular Unreal Engine 5 plugin features a local Python backend. The frontend interface captures user audio and style parameters; the local server runs model inference to generate CSV data; and the engine converts this data into Level Sequences via LiveLinkFaceImporter (Epic Games) for real-time character playback.
+        </div>
+        <div class="columns is-centered mt-4">
+          <div class="column is-full">
+            <img src="Assets/system_architecture.png" alt="Unreal Engine 5 System Plugin Architecture Overview">
+            <p class="is-size-6 mt-3 has-text-left text-muted"><strong>Figure: System overview.</strong> (1) In the frontend interface, the user can select the model, input audio (existing or live recording), conditioning style (i.e., speaking style, emotion, intensity), and a digital human character. (2) The data is passed to the backend process for generating the animation data. (3) After the inference, the data is sent to the engine which is used to create, apply to the selected character, and save the animations in the animation library, allowing the user to also retarget the saved animations to other compatible characters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="columns is-centered has-text-centered mt-6">
+      <div class="column is-full">
+        <h2 class="title is-3">Perceptual User Study Evaluation</h2>
+        <div class="content has-text-justified mb-5">
+          We conducted two statistically rigorous surveys via Prolific (30+ mutually exclusive participants each) utilizing within-subject repeated measures ANOVA (RM-ANOVA) to evaluate Lip-Sync, Realism, and Expressiveness on 7-point Likert scales, benchmarking our models directly against commercial tools from Epic Games and NVIDIA using MetaHuman character models. Experiment 1 uses 12 test-set dataset audios and includes an emotion recognition task, while Experiment 2 uses 8 neutral in-the-wild audios.
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-two-thirds">
+            <img src="Assets/user_study_question.png" alt="User Study Interface Questionnaire Screenshot" style="max-width: 100%; height: auto;">
+            <p class="is-size-6 mt-3 has-text-centered text-muted"><strong>Figure: Questionnaire layout.</strong> Interface and survey layout presented to participants during the evaluation. This template displays the full setup used for Experiment 1, which included the emotion recognition task. For Experiment 2, the setup was identical but the final emotion classification question was omitted.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{ABusacchi26_ueplugin,
+        author = {Busacchi, Alessandro and Haque, Kazi Injamamul and Yumak, Zerrin},
+        title = {Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans},
+        booktitle = {Special Interest Group on Computer Graphics and Interactive Techniques Conference Posters (SIGGRAPH Posters '26), July 19--23, 2026, Los Angeles, CA, USA},
+        year = {2026},
+        location = {Los Angeles, CA, USA},
+        numpages = {3},
+        url = {https://doi.org/10.1145/3799825.3818695},
+        doi = {10.1145/3799825.3818695},
+        publisher = {ACM},
+        address = {New York, NY, USA}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page. If you want to reuse their source code, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
