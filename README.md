@@ -6,7 +6,7 @@ Repository to host the project website for the paper:
 >**Accepted and presented at the [ACM SIGGRAPH 2026 Posters Program](https://s2026.siggraph.org/program/posters/)**
 >
 > <a href='https://uuembodiedsocialai.github.io/AutoFaceARKit/'><img src='https://img.shields.io/badge/Project-Website-blue'></a>
-> <a href='placeholder'><img src='https://img.shields.io/badge/arXiv-Paper-red'></a> 
+> <a href='https://arxiv.org/abs/2606.10753'><img src='https://img.shields.io/badge/arXiv-Paper-red'></a> 
 > <a href='https://doi.org/10.1145/3799825.3818695'><img src='https://img.shields.io/badge/ACM-Paper-violet'></a> 
 > <a href='https://uuembodiedsocialai.github.io/AutoFaceARKit/#video_demo'><img src='https://img.shields.io/badge/Supplementary-Video-Green'></a> 
 > 
